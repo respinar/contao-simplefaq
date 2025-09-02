@@ -3,12 +3,22 @@
 declare(strict_types=1);
 
 use Respinar\ContaoSimplefaqBundle\Controller\ContentElement\SimplefaqItemController;
+use Respinar\ContaoSimplefaqBundle\Controller\ContentElement\SimplefaqGroupController;
 use Respinar\ContaoSimplefaqBundle\Controller\ContentElement\SimplefaqStartController;
 use Respinar\ContaoSimplefaqBundle\Controller\ContentElement\SimplefaqStopController;
 
 /**
  * Modify the DCA for FAQ list
  */
+// FAQ Wrapper (Start)
+$GLOBALS['TL_DCA']['tl_content']['palettes'][SimplefaqGroupController::TYPE] = '
+    {type_legend},type,headline;
+    {template_legend:hide},customTpl;
+    {protected_legend:hide},protected;
+    {expert_legend:hide},cssID;
+    {invisible_legend:hide},invisible,start,stop
+';
+
 // FAQ Wrapper (Start)
 $GLOBALS['TL_DCA']['tl_content']['palettes'][SimplefaqStartController::TYPE] = '
     {type_legend},type,headline;
