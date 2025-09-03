@@ -1,0 +1,18 @@
+{% extends '@Contao/content_element/_base.html.twig' %}
+
+{% block content %}          
+
+    <div class="simplefaq__items">
+        {% for fragment in nested_fragments %}
+            {{ content_element(fragment) }}
+        {% endfor %}
+    </div>
+    
+{% endblock %}   
+
+{# Add metadata #}
+{% block metadata %}
+    {% if schemaOrgData %}
+        {% do add_schema_org(schemaOrgData) %}
+    {% endif %}
+{% endblock %}
