@@ -36,7 +36,7 @@ class SimplefaqGroupController extends AbstractContentElementController
         Request $request
     ): Response {
         
-        $children = ContentModel::findBy(
+        $faq_items = ContentModel::findBy(
             [
                 'pid=?',
                 'ptable=?',
@@ -52,7 +52,7 @@ class SimplefaqGroupController extends AbstractContentElementController
 
         $template->set(
             'schemaOrgData',
-            $this->schemaGenerator->generate($children),
+            $this->schemaGenerator->generate($faq_items),
         );
 
         return $template->getResponse();
