@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Respinar\ContaoSimplefaqBundle\Schema;
 
 use Contao\Model\Collection;
+use Contao\StringUtil;
 
 final class FaqSchemaGenerator
 {
@@ -28,7 +29,7 @@ final class FaqSchemaGenerator
                 'name' => $item->simplefaq_question,
                 'acceptedAnswer' => [
                     '@type' => 'Answer',
-                    'text' => $item->simplefaq_answer,
+                    'text' => strip_tags(StringUtil::stripInsertTags($item->simplefaq_answer)),
                 ],
             ];
         }
