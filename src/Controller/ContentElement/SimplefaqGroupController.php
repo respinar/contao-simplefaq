@@ -52,7 +52,7 @@ class SimplefaqGroupController extends AbstractContentElementController
 
         $template->set(
             'schemaOrgData',
-            $this->schemaGenerator->generate($faq_items),
+            $this->schemaGenerator->generate($faq_items, $model),
         );
 
         return $template->getResponse();
