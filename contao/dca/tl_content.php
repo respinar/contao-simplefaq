@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 use Respinar\ContaoSimplefaqBundle\Controller\ContentElement\SimplefaqItemController;
 use Respinar\ContaoSimplefaqBundle\Controller\ContentElement\SimplefaqGroupController;
-use Respinar\ContaoSimplefaqBundle\Controller\ContentElement\SimplefaqStartController;
-use Respinar\ContaoSimplefaqBundle\Controller\ContentElement\SimplefaqStopController;
 
 /**
  * Modify the DCA for FAQ list
@@ -19,28 +17,10 @@ $GLOBALS['TL_DCA']['tl_content']['palettes'][SimplefaqGroupController::TYPE] = '
     {invisible_legend:hide},invisible,start,stop
 ';
 
-// FAQ Wrapper (Start)
-$GLOBALS['TL_DCA']['tl_content']['palettes'][SimplefaqStartController::TYPE] = '
-    {type_legend},type,headline;
-    {template_legend:hide},customTpl;
-    {protected_legend:hide},protected;
-    {expert_legend:hide},cssID;
-    {invisible_legend:hide},invisible,start,stop
-';
-
 // FAQ Item
 $GLOBALS['TL_DCA']['tl_content']['palettes'][SimplefaqItemController::TYPE] = '
     {type_legend},type;
     {simplefaq_legend},simplefaq_question,simplefaq_answer;
-    {template_legend:hide},customTpl;
-    {protected_legend:hide},protected;
-    {expert_legend:hide},cssID;
-    {invisible_legend:hide},invisible,start,stop
-';
-
-// FAQ Wrapper (Stop)
-$GLOBALS['TL_DCA']['tl_content']['palettes'][SimplefaqStopController::TYPE] = '
-    {type_legend},type;
     {template_legend:hide},customTpl;
     {protected_legend:hide},protected;
     {expert_legend:hide},cssID;
