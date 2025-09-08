@@ -4,12 +4,13 @@ declare(strict_types=1);
 
 namespace Respinar\ContaoSimplefaqBundle\Schema;
 
+use Contao\ContentModel;
 use Contao\Model\Collection;
 use Contao\StringUtil;
 
 final class FaqSchemaGenerator
 {
-    public function generate(?Collection $items): ?array
+    public function generate(?Collection $items, ContentModel $model): ?array
     {
         if (null === $items) {
             return null;
@@ -39,6 +40,7 @@ final class FaqSchemaGenerator
         }
 
         return [
+            '@id' => sprintf('#/schema/faq/%d', $model->id),
             '@context' => 'https://schema.org',
             '@type' => 'FAQPage',
             'mainEntity' => $questions,
