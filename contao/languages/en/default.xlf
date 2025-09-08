@@ -8,24 +8,18 @@
             <trans-unit id="CTE.simplefaq">
                 <source>Simple FAQ</source>
             </trans-unit>
-            <trans-unit id="CTE.simplefaq_start.0">
-                <source>FAQ Wrapper (Start)</source>
+            <trans-unit id="CTE.simplefaq_group.0">
+                <source>FAQ group</source>
             </trans-unit>
-            <trans-unit id="CTE.simplefaq_start.1">
-                <source>Start of an FAQ section</source>
+            <trans-unit id="CTE.simplefaq_gruop.1">
+                <source>A FAQ group</source>
             </trans-unit>
             <trans-unit id="CTE.simplefaq_item.0">
                 <source>FAQ Item</source>
             </trans-unit>
             <trans-unit id="CTE.simplefaq_item.1">
                 <source>A single FAQ question and answer</source>
-            </trans-unit>
-            <trans-unit id="CTE.simplefaq_stop.0">
-                <source>FAQ Wrapper (Stop)</source>
-            </trans-unit>
-            <trans-unit id="CTE.simplefaq_stop.1">
-                <source>End of an FAQ section</source>
-            </trans-unit>
+            </trans-unit>         
         </body>
     </file>
 </xliff>
