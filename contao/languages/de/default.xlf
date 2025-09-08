@@ -10,13 +10,13 @@
                 <source>Simple FAQ</source>
                 <target>Einfache FAQ</target>
             </trans-unit>
-            <trans-unit id="CTE.simplefaq_start.0">
-                <source>FAQ Wrapper (Start)</source>
-                <target>FAQ-Wrapper (Start)</target>
+            <trans-unit id="CTE.simplefaq_group.0">
+                <source>FAQ Group</source>
+                <target>FAQ-Group</target>
             </trans-unit>
-            <trans-unit id="CTE.simplefaq_start.1">
-                <source>Start of an FAQ section</source>
-                <target>Beginn eines FAQ-Abschnitts</target>
+            <trans-unit id="CTE.simplefaq_group.1">
+                <source>A FAQ group</source>
+                <target>Eines FAQ-Group</target>
             </trans-unit>
             <trans-unit id="CTE.simplefaq_item.0">
                 <source>FAQ Item</source>
@@ -25,15 +25,7 @@
             <trans-unit id="CTE.simplefaq_item.1">
                 <source>A single FAQ question and answer</source>
                 <target>Eine einzelne FAQ-Frage und Antwort</target>
-            </trans-unit>
-            <trans-unit id="CTE.simplefaq_stop.0">
-                <source>FAQ Wrapper (Stop)</source>
-                <target>FAQ-Wrapper (Ende)</target>
-            </trans-unit>
-            <trans-unit id="CTE.simplefaq_stop.1">
-                <source>End of an FAQ section</source>
-                <target>Ende eines FAQ-Abschnitts</target>
-            </trans-unit>
+            </trans-unit>      
         </body>
     </file>
 </xliff>
