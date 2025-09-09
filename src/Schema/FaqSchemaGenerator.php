@@ -40,7 +40,7 @@ final class FaqSchemaGenerator
         }
 
         return [
-            '@id' => sprintf('#/schema/faq/%d', $model->id),
+            'identifier' => '#/schema/faq/'.$model->id,
             '@context' => 'https://schema.org',
             '@type' => 'FAQPage',
             'mainEntity' => $questions,
