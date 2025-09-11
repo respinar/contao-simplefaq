@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-use Respinar\ContaoSimplefaqBundle\Controller\ContentElement\SimplefaqItemController;
 use Respinar\ContaoSimplefaqBundle\Controller\ContentElement\SimplefaqGroupController;
+use Respinar\ContaoSimplefaqBundle\Controller\ContentElement\SimplefaqItemController;
 
-/**
+/*
  * Modify the DCA for FAQ list
  */
 // FAQ Wrapper (Start)
@@ -30,12 +30,12 @@ $GLOBALS['TL_DCA']['tl_content']['palettes'][SimplefaqItemController::TYPE] = '
 // Fields
 $GLOBALS['TL_DCA']['tl_content']['fields']['simplefaq_question'] = [
     'inputType' => 'text',
-    'eval'      => ['mandatory' => true, 'tl_class' => 'w100'],
-    'sql'       => "varchar(255) NOT NULL default ''"
+    'eval' => ['mandatory' => true, 'tl_class' => 'w100'],
+    'sql' => "varchar(255) NOT NULL default ''",
 ];
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['simplefaq_answer'] = [
     'inputType' => 'textarea',
-    'eval'      => ['mandatory' => true, 'rte'=>'tinyMCE', 'helpwizard'=>true],
-    'sql'       => "text NULL"
+    'eval' => ['mandatory' => true, 'rte' => 'tinyMCE', 'helpwizard' => true],
+    'sql' => 'text NULL',
 ];
