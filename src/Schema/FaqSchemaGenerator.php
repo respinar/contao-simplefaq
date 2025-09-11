@@ -10,9 +10,9 @@ use Contao\StringUtil;
 
 final class FaqSchemaGenerator
 {
-    public function generate(?Collection $items, ContentModel $model): ?array
+    public function generate(Collection|null $items, ContentModel $model): array|null
     {
-        if (null === $items) {
+        if (!$items instanceof Collection) {
             return null;
         }
 
