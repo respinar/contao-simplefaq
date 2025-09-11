@@ -25,17 +25,12 @@ class SimplefaqGroupController extends AbstractContentElementController
 {
     public const TYPE = 'simplefaq_group';
 
-    public function __construct(
-        private readonly FaqSchemaGenerator $schemaGenerator,
-    ) {
+    public function __construct(private readonly FaqSchemaGenerator $schemaGenerator)
+    {
     }
 
-    protected function getResponse(
-        FragmentTemplate $template,
-        ContentModel $model,
-        Request $request
-    ): Response {
-        
+    protected function getResponse(FragmentTemplate $template, ContentModel $model, Request $request): Response
+    {
         $faq_items = ContentModel::findBy(
             [
                 'pid=?',
@@ -47,7 +42,7 @@ class SimplefaqGroupController extends AbstractContentElementController
             ],
             [
                 'order' => 'sorting',
-            ]
+            ],
         );
 
         $template->set(
