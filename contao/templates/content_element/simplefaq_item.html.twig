@@ -1,10 +1,24 @@
 {% set attributes = attrs(attributes|default)
     .setIfExists('id', element_html_id)
-    .addClass([element_css_classes, "simplefaq__item"])
-    .set('open')
+    .addClass([element_css_classes, 'simplefaq__item'])
 %}
 
-<details {% block attributes %}{{ attributes }}{% endblock %}>
-    <summary class="simplefaq__question">{{ question|csp_inline_styles|insert_tag|encode_email|raw }}</summary>
-    <div class="simplefaq__answer">{{ answer|csp_inline_styles|insert_tag|encode_email|raw }}</div>
+{% if initially_open|default(true) %}
+    {% set attributes = attributes.set('open') %}
+{% endif %}
+
+{% block details %}
+<details{% block attributes %} {{ attributes }}{% endblock %}>
+    {% block summary %}
+    <summary class="simplefaq__question">
+        {{ question|csp_inline_styles|insert_tag|encode_email|raw }}
+    </summary>
+    {% endblock %}
+
+    {% block content %}
+    <div class="simplefaq__answer">
+        {{ answer|csp_inline_styles|insert_tag|encode_email|raw }}
+    </div>
+    {% endblock %}
 </details>
+{% endblock %}
